@@ -1,0 +1,9 @@
+.center{
+    display: flex;
+    justify-content: center;
+}
+.text {
+    font-family: "Arial Black", sans-serif;
+    background: linear-gradient(#c5c5d0, #3c3d3f);
+    margin-top: 10px;
+}

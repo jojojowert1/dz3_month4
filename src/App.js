@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import MainPage from "./components/pages/mainPage/MainPage";
+import AboutPage from "./components/pages/aboutPage/AboutPage";
+import UserPage from "./components/pages/userPage/UserPage";
+import style from "./app.module.css"
 
-function App() {
+
+function App(props) {
+    const mainContend = "Main Contend"
+
+    const AboutPageContend = {
+        title: "Title",
+        description: "text text text"
+    }
+
+    const userArray =  [{name: "Anna", age: 20}, {name: "Klara", age: 30}, {name: "Sofia", age: 25}]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.img}>
+        <MainPage text={mainContend}/>
+        <AboutPage pageContend={AboutPageContend}/>
+        <UserPage usersData={userArray}/>
     </div>
   );
 }
